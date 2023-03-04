@@ -1,112 +1,137 @@
-//
-// Created by Miguel on 25/02/2023.
-//
-//---------------
+//-----------------------------------
 //Miguel Henrique Martins Carvalho
 //766634
-//---------------
-
+//-----------------------------------
 #include <stdio.h>
-#include <time.h>
+#include <stdlib.h>
+#include <math.h>
 int main(){
+
     //Exercício 1
-    /* int x,y,soma;
-     printf("Digite o Primeiro numero :");
-     scanf("%d", &x);
-     printf("Digite o Segundo Numero :");
-     scanf("%d", &y);
-     soma = x + y;
-     printf("A Soma dos Valores de %d e %d sera %d", x,y,soma);
-     */
-    //Exercício 2
-    /* float salario;
-    float salariominimo = 1380.60;
-    float qtndsalario;
-    printf("Digite seu salário");
-    scanf("%f", &salario);
-    qtndsalario = salario/salariominimo;
-    printf("O seu salário é igual a %.2f do Salário minimo declarado", qtndsalario);
-    return 0;
-     */
-    //Exercício 3
-    /*int CDU,c1,d1,d2,u1,c2,r1,UDC;
-
-    printf("Escreva os 3 Digitos:");
-    scanf("%d", &CDU);
-    c1 = CDU/100;
-    r1=CDU%100;
-    d1=r1/10;
-    u1=CDU%10;
-    c2=u1*100;
-    d2=d1*10;
-
-    UDC = c2 + d2 + c1;
-    printf("%d", UDC);
-
-     */
-
-    //Exercício 4
     /*
-    int ano=1970;
-    int mes = 1;
-    int dia =1;
+    float energia=100, salario_minimo,residencia,qw,desconto,valp,desc,residenciacalc;
+    printf("Quanto de Energia QW sua residência gasta");
+    scanf("%f", &residencia);
+    printf("Qual Seu Salário");
+    scanf("%f", &salario_minimo);    
+   energia = (salario_minimo/7)/100;
+   valp = energia * residencia;
+   desconto = (valp*10) / 100;
+   desc = valp - desconto;
+   printf("O valor em reais do QW será de %f\n" , energia);
+   printf("O Valor em Reais a ser pago será de %f\n", valp);
+   printf("O Valor a Ser Pago com Desconto será de %f\n ", desc);
+   */
+   //Exercício 2
+   /*
+   float base,altura,perimetro,area,diagonal;
 
-    int anod,mesd,diad;
+   printf("Qual a Base do Retângula?");
+   scanf("%f", &base);
+   printf("Qual a Altura do Retângulo");
+   scanf("%f", &altura);
 
-    printf("Digite o ano :");
-    scanf("%d", &anod);
+   area = base * altura;
+   perimetro = 2 * base + 2 * altura;
+   diagonal = sqrt(pow(altura,2) + pow(base,2));
 
-    printf("Digite o mes :");
-    scanf("%d", &mes);
+   printf("A Area do Retângulo será %f\n" , area);
+   printf("O Perímetro do Retângulo será de %f\n", perimetro);
+   printf("O Diagonal será de %f\n", diagonal);      
+   */
+   //Exercício 3
+   /*
+   float raio,perimetro,area;
+   float PI = 3.14;
+   printf("Qual será o raio do Círculo");
+   scanf("%f", &raio);
+   perimetro = 2 * PI * raio;
+   area = PI * raio * raio;
+   printf("O Perímetro do Círculo será de %2.f\n", perimetro);
+   printf("A Aréa do Círculo será %2.f\n", area);
+   */
+   //Exercício 4
+   /*
+   int a,b,hipotenusa;
+   printf("Qual o valor do Cateto Oposto?");
+   scanf("%d" ,&a);
+    printf("Qual o valor do Cateto Adjacente?");
+    scanf("%d" ,&b);
+    hipotenusa= sqrt(pow(a,2) + pow(b,2));
+    printf("A hipotenusa será %d\n" , hipotenusa);
+   */
 
-    printf("Digite os dias :");
-    scanf("%d", &diad);
-
-
-   int calculoano,calculoano2,calculodia,calculominutos,calculosegundos;
-
-   diad = (anod-1970) * 365 + (mesd-1)*30 + (diad-1); 
-
-    calculosegundos= 60 * 60 * 24 - diad;
-
-
-   printf("Os segundos de diferença serão de %d: ", calculosegundos); */
-
-    
     //Exercício 5
+   /*
+    float numero,razao,decimo;
+     
+     printf("Digite o Primeiro termo da P.A");
+     scanf("%f", &numero);
+     printf("Digite a Razão da P.A");
+     scanf("%f", &razao);
+     decimo = numero + (10 - 1) * razao;
 
-    /* int CDU,c1,d1,d2,u1,c2,r1,UDC;
+     printf("O valor será %f\n" , decimo);
+      */
+   //Exercício 6
+   /*
+    float numero,razao,decimo;
+    printf("Digite o  termo da P.G");
+    scanf("%f", &numero);
+    printf("Digite a Razão da P.A");
+    scanf("%f", &razao);
+    decimo = numero * pow(razao,4);
 
-    printf("Escreva os 3 Digitos:");
-    scanf("%d", &CDU);
-    c1 = CDU/100;
-    r1=CDU%100;
-    d1=r1/10;
-    u1=CDU%10;
-    c2=u1*100;
-    d2=d1*10;
+    printf("O valor será %f\n" , decimo);
+    */
+   //Exercício 7
+     /*
+    int a, b, c;
 
-    UDC = c2 + d2 +c1;
-    printf("%d", UDC);
+    printf("Digite o primeiro valor: ");
+    scanf("%d", &a);
+    printf("Digite o segundo valor: ");
+    scanf("%d", &b);
 
-    int calculo;
+    // três operações de atribuição
+    c = a;// faz uma cópia de a em c
+    a = b;// copia b para a
+    b = c;// copia c para b
 
-    calculo = CDU + UDC;
-    printf("A soma dos dois será de %d\n", calculo);
+    printf("Valor do a: %d\n", a);
+    printf("Valor do B : %d\n", b);
+    */
+    //Exercício 8
+    /*
+    float numerador,denominador,decimal;
+    printf("Qual será o numerador da fração");
+    scanf("%f", &numerador);
+    printf("Qual será o denominador da fração:");
+    scanf("%f", &denominador);
+    decimal = numerador/denominador;
+    printf("O valor da Fração em Decimal será de : %f\n", decimal);
+    */
 
-    int calc1,calc2,calc3;
 
-    calc1 = c1 * u1;
+    //Exercício 9
+    /*
+    int horas,minutos;
+    printf("Qual a hora atual(Formato de Horas)");
+    scanf("%d", &horas);
+    minutos = (horas * 60);
+    printf("Desde o Início do dia até a hora informada já se passaram %d minutos", minutos);
+   */
 
-    printf("a soma seria %d\n", calc1);
+    //Exercício 10
 
-    calc2 = d2 * d1/10;
+    //Classifique os valores abaixo de acordo com seu tipo, assinalando com I os valores Inteiros, R os valores Reais e com C os Caracteres.
+    //
+    //(C) ‘a’     (C) ‘/’     (R) 5.7     (R) 1012     (R) -49     (R) +342     (I) 569     (C) ‘A     (C) ‘_’     (R) 0.00001     (R) -545      (I) 1     (I) 0     (C) ‘(‘
 
-    printf("A soma so segundo digito será de %d\n", calc2);
+    //Exercício 11
 
-    calc3 = u1 * c1;
-
-    printf("A Soma do Terceiro digito sera de %d\n", calc3);
-     */
+    // Assinale com um X os nomes de variáveis válidos.
+    //(X) abc     ( ) 3abc     (X) a     ( ) 123a     (X) –a     (X) acd1     (X) ABCDE     ( ) etc.     (X) b316     (X) leia     (X) inteiro     (X) valor     (X) _b248     ( ) nota*do*aluno     (X) a1b2c3     ( ) 3 x 4     ( ) -_ad     (X) A&a     ( ) guarda-chuva     ( ) A123     ( ) Aa     (X) guarda_chuva     ( ) km/h     ( ) 3xyz     ( ) nome empresa     (X) sala_215     ( ) “nota”     ( ) ah!
 
 }
+
